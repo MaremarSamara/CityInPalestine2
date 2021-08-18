@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Template Main CSS File -->
+  
+    <title>Jerusalem City</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+  
+    <!-- Favicons -->
+    <link href="website/static/assets/img/favicon.png" rel="icon">
+    <link href="website/static/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  
+    <!-- Vendor CSS Files -->
+    <link href="static/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="static/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="static/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="static/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  
+    <!-- Template Main CSS File -->
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='static/main.css') }}">
+</head>
+<body style="background-image: url('/static/assets/img/slide/weather.jpg');">
+    <h1>Jerusalem City</h1>
+     <img src="{{url_for('static', filename='assets/img/slide/slide_1.jpg')}}" style="display: block;
+     margin-left: auto;
+     margin-right: auto;
+     width: 50%;"  />
+
+        <p style="font-size: 25px;">Al-Quds (Hebrew: יְרוּשָׁלַיִם Yerushalayim) is the largest city in occupied historical Palestine in terms ,<br>
+            of area and population, and the most important religiously and economically. It is known by other names <br>
+            in the Arabic language, such as: Bait Al-Maqdis, Al-Quds Al-Sharif, the first of the two Qiblas, and in <br>
+            the Bible as Jerusalem, and Israel officially calls it: Jerusalem Al-Quds. <br><br><br>
+
+            Arabs, Palestinians, and a wide range of supporters of the Palestinian cause consider it the capital of <br>
+            the future state of Palestine after liberation, as stated in the document of the Palestinian Declaration <br>
+            of Independence that took place in Algeria on November 15, 1988 AD, (As for historically, their Jebusite <br>
+            ancestors were the first to build and inhabit the city in the fifth millennium BC). While Israel considers<br>
+            it its unified capital, after annexing the eastern part of the city in 1980 AD, which it occupied after <br>
+            the 1967 war (the Jews consider it their religious and national capital for more than 3000 years). As for <br>
+            the United Nations and the international community, it does not recognize Jerusalem as the capital of Israel,<br>
+            considers East Jerusalem part of the Palestinian territories, and does not recognize its annexation to the Hebrew <br>
+            state, with some exceptions. Jerusalem is located within the Hebron mountain range and mediates the area between<br> 
+            the Mediterranean Sea and the northern end of the Dead Sea. This city has grown and expanded its borders much more<br> 
+            than it was in previous eras.<br>
+        </p> 
+        <div class="previous"  style="background-color: #81b7e4;
+  top:80px;
+  color: white;
+  align-items: right;
+  font-size: 25px;
+  margin-left: 70%;
+  margin: 10 px;
+  padding: 10px;
+  position:center;
+  right:60%;
+  float: right;
+  border-radius: 20px;">
+            <a href="{{ url_for('views.home') }}">Retun </a>
+            </div>   
+    </div>   
+</body>
+</html>

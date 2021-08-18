@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <title>{{ city_name }} Weather</title>
+</head>
+
+<body style="background-image: url('/static/assets/img/slide/weather.jpg'); ">
+    <div class="table-title">
+        <h3>{{city_name}} Weather</h3>
+    </div>
+    <table class="table-fill">
+        <thead>
+            <tr>
+                <th class="text-left">Measurement</th>
+                <th class="text-left">Value</th>
+            </tr>
+        </thead>
+        <tbody class="table-hover">
+            
+            <tr>
+                <td class="text-left">Weather</td>
+                <td class="text-left">{{weather}}</td>
+            </tr>
+            <tr>
+                <td class="text-left">Weather Description</td>
+                <td class="text-left">{{weather_description}}</td>
+            </tr>
+            <tr>
+                <td class="text-left">Temperature</td>
+                <td class="text-left">{{temperature}}°C</td>
+            </tr>
+            <tr>
+                <td class="text-left">Pressure</td>
+                <td class="text-left">{{pressure}}</td>
+            </tr>
+            <tr>
+                <td class="text-left">Humidity</td>
+                <td class="text-left">{{humidity}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="previous"  style="background-color:  #92b4e7;
+              top:90px;
+              color: white;
+              align-items: right;
+              font-size: 25px;
+              
+              margin-left: 200px;
+               margin-top: 10px;
+              padding: 1px;
+               float: right; ">
+              <a href="{{ url_for('views.weather') }}">Retun </a> <br><br>
+              </div>
+
+              <div class="next" style="background-color:  #92b4e7;
+              top:90px;
+              color: white;
+              align-items: right;
+              font-size: 25px;
+              margin-bottom: 50px;
+              margin-left: 200px;
+               margin-top: 10px;
+              padding: 10px;
+               float: left;" >
+              <a href="{{ url_for('views.home') }}">Home Page </a>
+              </div>
+</body>
+
+</html>

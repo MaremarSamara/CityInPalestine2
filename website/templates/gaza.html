@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaza City</title>
+</head>
+<body style="background-image: url('/static/assets/img/slide/weather.jpg');">
+    <h1>Gaza City</h1>
+    
+        <img src="{{url_for('static', filename='assets/img/slide/gaza.jpg')}}" style="display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;"  />
+
+     <p style="font-size: 25px;">
+        Gaza is a Palestinian coastal city, and the largest city in the Gaza Strip is located in its north,<br> 
+        at the southern tip of the eastern coast of the Mediterranean Sea. It is 78 km from the city of Jerusalem<br> 
+        to the southwest. It is the center of Gaza Governorate and the largest city of the Palestinian Authority in <br>
+        terms of population. The population of Gaza Governorate reached 700,000 people in 2013, making it the largest <br>
+        gathering of Palestinians in Palestine. It covers an area of ​​56 km2, making it one of the most densely populated<br> 
+        cities in the world.<br><br><br>
+
+Gaza City is considered one of the most important Palestinian cities, due to the importance of its strategic location and <br>
+the economic and urban importance of the city, in addition to being the temporary headquarters of the Palestinian National <br>
+Authority, and the presence of many of its headquarters and ministry in it.<br>
+    </p>
+    <div class="previous"  style="background-color: #81b7e4;
+    top:80px;
+    color: white;
+    align-items: right;
+    font-size: 25px;
+    margin-left: 70%;
+    margin: 10 px;
+    padding: 10px;
+    position:center;
+    right:60%;
+    float: right;
+    border-radius: 20px;">
+              <a href="{{ url_for('views.home') }}">Retun </a>
+              </div>
+            </div>
+</body>
+</html>

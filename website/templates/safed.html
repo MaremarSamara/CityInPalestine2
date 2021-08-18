@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safed City</title>
+    <link href="static/main.css" rel="stylesheet">
+</head>
+<body style="background-image: url('/static/assets/img/slide/weather.jpg');">
+    
+        <h1>Safed City</h1>
+        <img src="{{url_for('static', filename='assets/img/slide/safed.jpg')}}" style="display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;"  />
+        <br>
+        <br>
+        <p style="font-size: 25px;">
+        Safed (Hebrew: צפת) is one of the historical cities of Palestine. The city is located in the Galilee region.<br> 
+        Today, it is in the northern region of Israel. It is also considered one of the country's highest cities, about <br>
+        900 meters above sea level. It is located 134 km north of Jerusalem, overlooking the Sea of ​​Galilee and the Beisan<br> 
+        meadow to the southeast, and Mount Al-Jarmaq to the west. The area of ​​the city is 29,248 km², and it is inhabited <br>
+        today by about 28,000 people - most of them are Jews, after the displacement of its Arab people in the 1948 war.<br> 
+        It was mentioned in Jewish religious literature and among Roman historians, and since the sixteenth century, with <br>
+        the fall of Andalusia and the expulsion of the Jews from the Iberian Peninsula, arose It has a community of Sephardic <br>
+        Jews and followers of the Kabbalah in particular, which made it one of the four holy cities of Judaism at that time. <br>
+        In the Ottoman era, it was the center of the Sanjak of Safad belonging to the Eyalet of Damascus, and during the period <br>
+        of the British Mandate over Palestine, it was the center of the district of Safed.<br>
+    </p>
+    <p style="font-size: 25px;">
+        During the archaeological excavations around the Citadel of Safed (The Orphan Tower), urban remains from the Iron Age and <br>
+        Bronze Age burials were found. The city is not mentioned in the ancient sources, so it seems that it was a small town in <br>
+        pre-Christian times. The Book of Judges mentions a Canaanite city called “Safat” (Judges 1:17), but it appears from the <br>
+        description of its place that it fell in the Negev and has no connection with the contemporary city of Safed. The first <br>
+        undoubted reference to the city of Safed is in the books of the historian Josephus Flavius, who mentions it as one of the <br>
+        sites that fortified in preparation for the failed Jewish rebellion against the Roman Empire in the first century AD.<br>
+    </p>
+    <div class="previous"  style="background-color: #81b7e4;
+    top:80px;
+    color: white;
+    align-items: right;
+    font-size: 25px;
+    margin-left: 70%;
+    margin: 10 px;
+    padding: 10px;
+    position:center;
+    right:60%;
+    float: right;
+    border-radius: 20px;">
+              <a href="{{ url_for('views.home') }}">Retun </a>
+              </div>
+</body>
+</html>

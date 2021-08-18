@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaffa City</title>
+</head>
+<body style="background-image: url('/static/assets/img/slide/weather.jpg');">
+    <h1>Jaffa City</h1>
+    <img src="{{url_for('static', filename='assets/img/slide/jaffa.jpg')}}" style="display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;"  /><br><br>
+    <p style="font-size: 25px;">Jaffa (Hebrew: יָפוֹ Yafu) is one of the oldest and most important historical cities in Palestine.<br> 
+       Today it is located within the Israeli municipality of "Tel Aviv - Jaffa", on the eastern coast of <br>
+       the Mediterranean Sea - according to the Israeli administrative division. It is 55 km from Jerusalem <br>
+       to the west. For a long time, it occupied an important position among the major Palestinian cities in <br>
+       terms of area, population and strategic location, until the date of the Nakba in 1948, and the displacement <br>
+       of most of its Arab residents. Today, it is inhabited by approximately 60,000 people, most of whom are Jews,<br> 
+       and an Arab minority of Muslims and Christians.
+    </p><br> 
+   <p style="font-size: 25px;">
+    The city was founded by the Canaanites in the fourth millennium BC, and since that date it has been an important <br>
+    commercial center for the region. The Assyrian, Babylonian and Persian rule BC, and its link with the Greek <br>
+    civilization was close, then it entered the rule of the Romans and the Byzantines, and its inhabitants were among<br> 
+    the first to embrace Christianity. One of the most important events that the city witnessed was when the Prophet <br>
+    Yunus descended on its shores in the eighth century B.C. to board a ship from it, destined for Tarshish. When the <br>
+    Islamic conquest entered Palestine, Amr Ibn Al-Aas conquered Jaffa in the same year that Omar Ibn Al-Khattab entered<br> 
+    Jerusalem. Jaffa continued to occupy this important position among the cities of Palestine, and remained a major <br>
+    commercial center, a port for Jerusalem and a port for pilgrims. During the Ottoman period, specifically in 1885,<br> 
+    the first municipal council was established in Jaffa.<br>
+   </p>
+
+   <div class="previous"  style="background-color: #81b7e4;
+   top:80px;
+   color: white;
+   align-items: right;
+   font-size: 25px;
+   margin-left: 70%;
+   margin: 10 px;
+   padding: 10px;
+   position:center;
+   right:60%;
+   float: right;
+   border-radius: 20px;">
+             <a href="{{ url_for('views.home') }}">Retun </a>
+             </div> 
+</body>
+</html>

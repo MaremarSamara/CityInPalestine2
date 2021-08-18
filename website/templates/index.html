@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <!-- link of bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+  <title>Palstine City</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="static/assets/img/favicon.png" rel="icon">
+  <link href="static/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="static/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="static/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="static/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Groovin - v4.3.0
+  * Template URL: https://bootstrapmade.com/groovin-free-bootstrap-theme/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <h1 class="logo"><a href="/templates/index.html"> City in Palestine</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#team">Team</a></li>
+         
+        </ul>
+        <ul>
+          
+          <li class="dropdown"><a href="#"><span>Cities</span> <i class="bi bi-chevron-right"></i></a>
+            <ul>
+              <li><a href="{{ url_for('views.AlAqsaMosque') }}">Jerusalem City</a></li>
+              <li><a href="{{ url_for('views.jericho') }}">Jericho City</a></li>
+              <li><a href="{{ url_for('views.yafa') }}">Jaffa City</a></li>
+              <li><a href="{{ url_for('views.safed') }}">Safed City</a></li>
+              <li><a href="{{ url_for('views.gaza') }}">Gaza City</a></li>
+            </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+        <li><a class="nav-link scrollto" href="{{ url_for('views.weather') }} ">Weather</a></li>
+        <li>  <a class="nav-item nav-link" href="/login">Login</a></li>
+           <li> <a class="nav-item nav-link" href="/sign-up">Sign Up</a></li>
+           <li> <a class="nav-item nav-link" href="{{ url_for('views.addCity') }}">Add City</a></li>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div class="hero-container">
+      <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+        <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+        <div class="carousel-inner" role="listbox">
+
+          <!-- Slide 1 -->
+          <div class="carousel-item active" style="background: url(static/assets/img/slide/Jerusalem.jpg);">
+            <div class="carousel-container">
+              <div class="carousel-content">
+                <h2 class="animate__animated animate__fadeInDown"> Jerusalem City</h2>
+                <p class="animate__animated animate__fadeInUp">Jerusalem, the largest city in occupied historical Palestine in terms of area and population, and the most important religiously and economically. It is known by other names in the Arabic language, such as: Bayt Al-Maqdis, Al-Quds Al-Sharif, the first of the two Qiblas, and in the Bible as Jerusalem, and Israel officially calls it: Jerusalem Al-Quds.</p>
+                <div>
+                  <a href="{{ url_for('views.AlAqsaMosque') }}" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="carousel-item" style="background: url_for('static', filename='assets/img/slide/jericho.jpg')">
+            <div class="carousel-container">
+              <div class="carousel-content">
+                <h2 class="animate__animated animate__fadeInDown">Jericho City</h2>
+                <p class="animate__animated animate__fadeInUp">Jericho is an ancient historic Palestinian city located in the West Bank near the Jordan River and north of the Dead Sea, dating back to 10,000 BC. It is the capital of Jericho Governorate and is the oldest city in history.</p>
+                <div>
+                  <a href="{{ url_for('views.jericho') }}" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+               <!-- Slide 3 -->
+          <div class="carousel-item" style="background: url(static/assets/img/slide/gaza.jpg);">
+            <div class="carousel-container">
+              <div class="carousel-content">
+                <h2 class="animate__animated animate__fadeInDown">Gaza City</h2>
+                <p class="animate__animated animate__fadeInUp">Gaza is a Palestinian coastal city, and the largest city in the Gaza Strip is located in its north, at the southern tip of the eastern coast of the Mediterranean Sea.</p>
+                <div>
+                  <a href="{{ url_for('views.gaza') }}" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 4 -->
+          <div class="carousel-item" style="background: url(static/assets/img/slide/safed.jpg);">
+            <div class="carousel-container">
+              <div class="carousel-content">
+                <h2 class="animate__animated animate__fadeInDown">Safed City</h2>
+                <p class="animate__animated animate__fadeInUp">Safed is one of the historical cities of Palestine. The city is located in the Galilee region. Today, it is in the northern region of Israel. It is also considered one of the country's highest cities, about 900 meters above sea level.</p>
+                <div>
+                  <a href="{{ url_for('views.safed') }}" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 5 -->
+          <div class="carousel-item" style="background: url(static/assets/img/slide/jaffa.jpg);">
+            <div class="carousel-background"><img src="static/assets/img/slide/jaffa.jpg" alt=""></div>
+            <div class="carousel-container">
+              <div class="carousel-content">
+                <h2 class="animate__animated animate__fadeInDown">Jafa City</h2>
+                <p class="animate__animated animate__fadeInUp">Jaffa is one of the oldest and most important historical cities in Palestine. Today it is located within the Israeli municipality of "Tel Aviv - Jaffa", on the eastern coast of the Mediterranean Sea - according to the Israeli administrative division. It is 55 km from Jerusalem to the west.</p>
+                <div>
+                  <a href="{{ url_for('views.yafa') }}" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+        </a>
+
+        <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+        </a>
+
+      </div>
+    </div>
+  </section><!-- End Hero -->
+
+  
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+      
+        <div class="row no-gutters">
+          <div class=></div>
+          
+          <div class="col-xl-7 ps-0 ps-lg-5 pe-lg-1 d-flex align-items-stretch">
+            <div class="image col-xl-6 d-flex align-items-stretch justify-content-center justify-content-lg-start">
+              <img src="{{url_for('static', filename='assets/img/slide/weather.jpg')}}" style="
+                  height: 200px;
+              margin-right: 90px;
+              width: 190%;
+              float: left;
+              margin-left: -90px;
+              margin-top: 60px;"
+                /></div>
+            <div class="content d-flex flex-column justify-content-center">
+              <h3>Cities of Palestine</h3>
+              <p>
+                It is a website that presents a group of Palestinian cities and a description of each city.
+              </p>
+              <div class="row">
+                <div class="col-md-6 ">
+                  <i class="bx bx-receipt"></i>
+                  <h4>Jerusalem City</h4>
+                  
+                </div>
+                <div class="col-md-6 ">
+                  <i class="bx bx-cube-alt"></i>
+                  <h4>Gaza City</h4>
+                  
+                </div>
+                <div class="col-md-6">
+                  <i class="bx bx-images"></i>
+                  <h4>Jericho City</h4>
+               
+                </div>
+                <div class="col-md-6 ">
+                  <i class="bx bx-shield"></i>
+                  <h4>Safed City</h4>
+                  
+                </div>
+                <div class="col-md-9">
+                  <i class="bx bx-images"></i>
+                  <h4>Jaffa City</h4>
+               
+                </div>
+              </div>
+            </div><!-- End .content-->
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    
+    </section><!-- End Counts Section -->
+
+    <!-- ======= Clients Section ======= -->
+    <section id="clients" class="clients section-bg">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="assets/img/clients/client-1.png" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="assets/img/clients/client-2.png" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="assets/img/clients/client-3.png" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="assets/img/clients/client-4.png" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="assets/img/clients/client-5.png" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="assets/img/clients/client-6.png" class="img-fluid" alt="">
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Clients Section -->
+
+  
+
+    
+    
+    <!-- ======= Team Section ======= -->
+    <section id="team" class="team">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Team</h2>
+         
+        </div>
+
+        <div class="row">
+
+          <div >
+            <div class="member">
+              <img src="static/assets/img/team/image_1.jpg" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Maremar Samara</h4>
+                  <span>Software Engineering</span>
+                  <div class="social">
+                    <a href="https://twitter.com/MaremarSamara"><i class="bi bi-twitter"></i></a>
+                    <a href="https://www.facebook.com/meme.sam2001/"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.instagram.com/maremar_samara0/"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/%D9%85%D8%A7%D8%B1%D9%8A%D9%85%D8%A7%D8%B1-%D8%B3%D9%85%D8%A7%D8%B1%D9%87-5478a8195/"><i class="bi bi-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+      </div>
+    </section><!-- End Team Section -->
+
+    
+    
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+          
+        </div>
+
+        <div class="row contact-info">
+
+          <div class="col-md-4">
+            <div class="contact-address">
+              <i class="bi bi-geo-alt"></i>
+              <h3>Address</h3>
+              <address> Baqaan Street, Bruqeen, Salfeet</address>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="contact-phone">
+              <i class="bi bi-phone"></i>
+              <h3>Phone Number</h3>
+              <p><a href="tel:0568907036">0568907036</a></p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="contact-email">
+              <i class="bi bi-envelope"></i>
+              <h3>Email</h3>
+              <p><a href="mailto:maremar.samara@stu.najah.edu">maremar.samara@stu.najah.edu</a></p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="form">
+          <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <div class="row">
+              <div class="col-md-6 form-group">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+              </div>
+              <div class="col-md-6 form-group mt-3 mt-md-0">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email">
+              </div>
+            </div>
+            <div class="form-group mt-3">
+              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+            </div>
+            <div class="form-group mt-3">
+              <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+            </div>
+            <div class="my-3">
+              <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Your message has been sent. Thank you!</div>
+            </div>
+            <div class="text-center"><button type="submit">Send Message</button></div>
+          </form>
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3>City of Palestine</h3>
+              <p>
+                Baqaan Street <br>
+                , Bruqeen, Salfeet<br><br>
+                <strong>Phone:</strong> 0568907036<br>
+                <strong>Email:</strong> maremar.samara@stu.najah.edu<br>
+              </p>
+              <div class="social-links mt-3">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+<!--
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+            </ul>
+          </div>
+-->
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Our Newsletter</h4>
+            <p>If you want to contact us</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <!--<div class="copyright">
+        &copy; Copyright <strong><span>Groovin</span></strong>. All Rights Reserved
+      </div>
+    -->
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/groovin-free-bootstrap-theme/ -->
+      <!--  Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>-->
+
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
